@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material"
 import { CircledIconButton } from "../../shared/components/button/Button"
-import { FileDownload, GitHub, LinkedIn } from "@mui/icons-material"
+import { FileDownload, GitHub, LinkedIn, Mail } from "@mui/icons-material"
 
 export const Introduction = () => {
     return (
@@ -11,9 +11,26 @@ export const Introduction = () => {
             <Typography variant="body2" fontStyle="italic">I am currently working under Sinarmas Mining and placed at Sinarmas Multiartha, holding company for Sinarmas financial services industries.</Typography>
 
             <Box sx={{ display: "flex", gap: "4px" }}>
-                <CircledIconButton Icon={GitHub}/>
-                <CircledIconButton Icon={LinkedIn}/>
-                <CircledIconButton Icon={FileDownload}/>
+                <CircledIconButton 
+                    Icon={GitHub}
+                    tooltipInfo={"Github"}
+                    url={"https://github.com/ihdiannaja"}
+                />
+                <CircledIconButton 
+                    Icon={LinkedIn}
+                    tooltipInfo={"LinkedIn"}
+                    url={"https://www.linkedin.com/in/ihdiannaja/"}
+                />
+                <CircledIconButton 
+                    Icon={Mail}
+                    tooltipInfo={"ihdiannaja00@gmail.com"}
+                    url={"https://mailto:ihdiannaja00@gmail.com"}
+                />
+                <CircledIconButton 
+                    Icon={FileDownload}
+                    tooltipInfo={"CV"}
+                    url={"https://drive.google.com/drive/u/0/folders/1rvL6069FNqKJvErrQRMeWGei4-vO0BfA"}
+                />
             </Box>
         </Box>
     )

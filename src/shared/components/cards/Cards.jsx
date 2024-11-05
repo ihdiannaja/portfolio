@@ -1,7 +1,11 @@
 import PropTypes from "prop-types"
 import { Button, Card, CardActions, CardContent, Typography } from "@mui/material"
 
-export const CardsWithButton = ({ title, description, techStack }) => {
+export const CardsWithButton = ({ title, url, description, techStack }) => {
+    const handleClick = () => {
+        window.open(url, '_blank')
+    }
+
     return (
         <Card
             elevation={0}
@@ -9,7 +13,7 @@ export const CardsWithButton = ({ title, description, techStack }) => {
                 display: "flex",
                 flexDirection: "column",
                 padding: "8px",
-                marginY: "8px",
+                marginTop: "8px",
                 minWidth: 288,
                 borderRadius: "12px",
                 boxShadow: "0 2px 4px 0 rgba(138, 148, 159, 0.2)",
@@ -25,6 +29,7 @@ export const CardsWithButton = ({ title, description, techStack }) => {
             </CardContent>
             <CardActions sx={{ display: "flex", alignItems: "flex-end", justifyContent: "flex-end", m: 0, p: "0px 16px 8px 16px" }}>
                 <Button 
+                    onClick={handleClick}
                     variant="contained" 
                     size="small" 
                     sx={{ 
@@ -43,5 +48,6 @@ export const CardsWithButton = ({ title, description, techStack }) => {
 CardsWithButton.propTypes = {
   description: PropTypes.any,
   techStack: PropTypes.any,
-  title: PropTypes.any
+  title: PropTypes.any,
+  url: PropTypes.any
 }
