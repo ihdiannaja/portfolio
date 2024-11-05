@@ -37,7 +37,6 @@ export const CardsWithButton = ({ title, url, description, techStack }) => {
                         '&:hover': {
                             backgroundColor: '#828893',
                             boxShadow: "0 4px 20px 0 rgba(0,0,0,0.12)",
-                            transform: "scale(1.1)",
                         },        
                     }}
                 >Go to the Page</Button>
