@@ -1,9 +1,10 @@
+import PropTypes from "prop-types"
 import { Box, Typography } from "@mui/material"
 import { CardsWithButton } from "../../shared/components/cards/Cards"
 
-export const Portfolios = () => {
+export const Portfolios = ({ style }) => {
     return (
-        <Box sx={{ marginTop: "24px" }}>
+        <Box sx={[{ marginTop: "24px" }, style]}>
             <Typography variant="body1" fontWeight={"bold"}>Portfolio</Typography>
             <CardsWithButton 
                 url={"https://nanotes.vercel.app"}
@@ -13,4 +14,7 @@ export const Portfolios = () => {
             />
         </Box>
     )
+}
+Portfolios.propTypes = {
+  style: PropTypes.any
 }
