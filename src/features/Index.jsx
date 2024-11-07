@@ -5,7 +5,7 @@ import { Portfolios } from "./portfolios/Portfolios"
 
 export const Index = () => {
     return (
-    <Box sx={{ bgcolor: "cyan", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+    <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", height: "100vh" }}>
         <Box sx={{ display: "flex", maxWidth: "800px" }}>
             <Introduction/>
             <ProfilePhoto/>
